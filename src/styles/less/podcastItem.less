@@ -1,0 +1,85 @@
+.podcastItem {
+    width: 33.3333%;
+    height: 400px;
+    display: inline-block;
+    background: @grey;
+
+    &__cover {
+        position: relative;
+        background: @accent;
+        color: #fff;
+        height: 300px;
+        font-family: @specialFontFamily;
+        padding: 20px;
+
+        &:hover &__controls {
+            opacity: 1;
+        }
+
+        &__controls {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            transform-style: preserve-3d;
+
+            opacity: 0;
+            transition: .3s all;
+
+             &__item {
+                @dimensions: 100px;
+
+                .vertically-center;
+
+                background: @red;
+                font-size: 4rem;
+                height: @dimensions;
+                width: @dimensions;
+                line-height: @dimensions;
+                text-align: center;
+                margin: 0 10px;
+                display: inline-block;
+                opacity: 1;
+
+                &:hover {
+                    background: @red-dark;
+                }
+
+                &.twitter {
+                    @bgColor: #31AAF3;
+                    background: @bgColor;
+
+                    &:hover {
+                        background: darken(@bgColor, 10%);
+                    }
+                }
+
+                &.facebook {
+                    @bgColor: #435FA3;
+                    background: @bgColor;
+
+                    &:hover {
+                        background: darken(@bgColor, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__episode {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.1rem;
+    }
+
+    &__description {
+        padding: 10px;
+    }
+}

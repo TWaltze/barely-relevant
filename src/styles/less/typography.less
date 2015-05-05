@@ -1,5 +1,6 @@
 // Variables
 @fontFamily: 'Open Sans', Helvetica, sans-serif;
+@specialFontFamily: 'Montserrat', sans-serif;
 @fontColor: #333;
 @fontSize: 14px;
 
@@ -20,6 +21,7 @@ body {
 
 h1 {
     font-size: 2.5rem;
+
 }
 
 h2 {
@@ -90,4 +92,11 @@ a {
     &--bold {
         font-weight: 700;
     }
+}
+
+.logo {
+    font-family: @specialFontFamily;
+    font-weight: 700;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
 }
