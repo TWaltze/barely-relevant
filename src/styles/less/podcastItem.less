@@ -1,16 +1,21 @@
 .podcastItem {
-    width: 33.3333%;
-    height: 400px;
-    display: inline-block;
     background: @grey;
 
     &__cover {
         position: relative;
         background: @accent;
         color: #fff;
-        height: 300px;
         font-family: @specialFontFamily;
-        padding: 20px;
+        padding-bottom: 60%;
+
+        &__info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
 
         &:hover &__controls {
             opacity: 1;
