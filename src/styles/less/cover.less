@@ -1,0 +1,38 @@
+.cover {
+    @background: '/img/cover-alt.jpeg';
+
+    height: 400px;
+    background: @accent-lightest;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    background: url(@background) no-repeat center center;
+    background-size: cover;
+
+    &__title {
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    &__description {
+        display: inline;
+        font-weight: 300;
+        line-height: 1.7;
+    }
+
+    .highlight {
+        @color: @accent;
+
+        background: @color;
+        padding: 5px 0;
+
+		// Proper padding on highlight
+        box-shadow: 10px 0 0 @color,
+                    -10px 0 0 @color;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+    }
+}

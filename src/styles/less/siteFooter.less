@@ -20,16 +20,20 @@
     }
 
     &__nav {
-        display: inline-block;
         text-transform: lowercase;
-        float: right;
+        text-align: right;
+        margin: 0 20px;
 
         &__item {
             display: inline-block;
             margin: 0 10px;
 
+            &:first-child {
+                    margin-left: 0;
+            }
+
             &:last-child {
-                margin: 0;
+                margin-right: 0;
             }
         }
     }
